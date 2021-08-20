@@ -34,6 +34,8 @@ jobs:
       - run: echo "2- ${{ github.event.pull_request.head.ref }}"
       - run: echo "3- ${{ github.base_ref }}"
       - run: echo "4- ${{ github.event.pull_request.title }}"
-      - run: echo "5- ${{ github.base_ref }}" 
+      - run: echo "5- ${{ github.base_ref }}"
+      - run: echo "6- ${{ github.event.changes.body.from }}"
+      - run: echo "7- ${{ github.event.comment.body }}"
 
 
