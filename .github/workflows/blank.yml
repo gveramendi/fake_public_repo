@@ -37,6 +37,7 @@ jobs:
       - run: echo "7- ${{ github.event.comment.body }}"
       - run: echo "8- ${{ github.event.issue.pull_request.head.ref }}"
       - run: echo "9- ${{ github.event.pull_request.head.label }}"
-      - run: echo "9- ${{ github.event.issue.pull_request.url.head.ref }}"
+      - run: echo "10- ${{ github.event.issue.pull_request.url }}"
+      - run: echo "11- ${{ github.event.issue.pull_request.head.ref }}"
 
 
