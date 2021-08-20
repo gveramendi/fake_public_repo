@@ -27,7 +27,10 @@ jobs:
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
-
+      - name: $github
+        run:   echo "$GITHUB_CONTEXT"
+        env:
+         GITHUB_CONTEXT: ${{ toJson(github) }}
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: echo "1- ${{ steps.extract_branch.outputs.branch }}"
