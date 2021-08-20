@@ -30,10 +30,10 @@ jobs:
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - run: echo "${{ steps.extract_branch.outputs.branch }}"
-      - run: echo "${{ github.event.pull_request.head.ref }}"
-      - run: echo "${{ github.base_ref }}"
-      - run: echo "${{ github.event.pull_request.title }}"
-      - run: echo "${{ github.base_ref }}" 
+      - run: echo "1- ${{ steps.extract_branch.outputs.branch }}"
+      - run: echo "2- ${{ github.event.pull_request.head.ref }}"
+      - run: echo "3- ${{ github.base_ref }}"
+      - run: echo "4- ${{ github.event.pull_request.title }}"
+      - run: echo "5- ${{ github.base_ref }}" 
 
 
