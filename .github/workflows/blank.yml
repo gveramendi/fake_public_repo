@@ -42,6 +42,7 @@ jobs:
       - run: echo "12- ${{ github.event.issue.pull_request.state }}"
       - run: echo "13- ${{ github.event.issue.pull_request.title }}"
       - run: echo "14- ${{ github.event.issue.pull_request.number }}"
-      - run: echo "15- ${{ github.event.issue.pull_request.issue_url }}"
+      - run: echo "15- ${{ github.event.issue.title }}"
+      - run: echo "15- ${{ github.event.issue.number }}"
 
 
