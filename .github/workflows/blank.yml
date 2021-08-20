@@ -44,5 +44,6 @@ jobs:
       - run: echo "14- ${{ github.event.issue.pull_request.number }}"
       - run: echo "15- ${{ github.event.issue.title }}"
       - run: echo "15- ${{ github.event.issue.number }}"
+      - run: echo "16- ${{ steps.extract_branch }}"
 
 
