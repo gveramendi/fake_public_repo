@@ -5,8 +5,14 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
+  pull_request:
+      branches:
+      - "**"
+  
   issue_comment:
     types: [created]
+    branches:
+      - "**"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,6 +31,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: echo "${{ steps.extract_branch.outputs.branch }}"
-      - run: echo "${{ github.event.pull_request.head.ref }}" 
+      - run: echo "${{ process.env.GITHUB_HEAD_REF }}" 
+      - run: echo "${{ github.event.pull_request.head.ref }}"
+      - run: echo "${{ github.base_ref }}"
+      - run: echo "${{ github.event.pull_request.title }}"
+      - run: echo "${{ github.base_ref }}" 
 
 
