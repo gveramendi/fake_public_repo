@@ -40,5 +40,6 @@ jobs:
       - run: echo "5- ${{ github.base_ref }}"
       - run: echo "6- ${{ github.event.changes.body.from }}"
       - run: echo "7- ${{ github.event.comment.body }}"
+      - run: echo "2- ${{ github.event.issue.pull_request.url.head.ref }}"
 
 
