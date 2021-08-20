@@ -39,7 +39,9 @@ jobs:
       - run: echo "9- ${{ github.event.pull_request.head.label }}"
       - run: echo "10- ${{ github.event.issue.pull_request.url }}"
       - run: echo "11- ${{ github.event.issue.pull_request.id }}"
-      - run: echo "12- ${{ github.event.issue.pull_request.head }}"
-      - run: echo "13- ${{ github.event.issue.pull_request.state }}"
+      - run: echo "12- ${{ github.event.issue.pull_request.state }}"
+      - run: echo "13- ${{ github.event.issue.pull_request.title }}"
+      - run: echo "14- ${{ github.event.issue.pull_request.number }}"
+      - run: echo "15- ${{ github.event.issue.pull_request.issue_url }}"
 
 
